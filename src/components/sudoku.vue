@@ -29,7 +29,7 @@
                 </div>
                 <div v-else>
                     <div class="alert alert-success alert-dismissible" v-if="alert_sc">
-                        <button type="button" class="close" @click='alert_sc=false'>&times;</button>
+                        
                         <strong>Success!</strong> Chúc mừng bạn đã hoàn thành câu đố.
                     </div>
                     <div class="alert alert-danger alert-dismissible" v-if="alert_fl">
@@ -101,6 +101,7 @@
                     setTimeout(
                         ()=>{
                             this.runGame=false;
+							this.alert_sc=false;
                         },3000);
                 }
             }
